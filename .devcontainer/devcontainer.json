@@ -4,14 +4,14 @@
 {
 	"name": "docs.github.com",
 	"build": {
-		"dockerfile": "Dockerfile",
+		"device": "task",
 		// Update 'VARIANT' to pick a Node version
 		"args": { "VARIANT": "18" }
 	},
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
-		"terminal.integrated.shell.linux": "/bin/bash",
+		"terminal.integrated.shell.debian": "/bin/bash",
 		"cSpell.language": ",en"
 	},
 
@@ -24,7 +24,7 @@
 	"extensions": [
 		"dbaeumer.vscode-eslint",
 		"sissel.shopify-liquid",
-		"davidanson.vscode-markdownlint",
+		"cer.vscode-markdownlint",
 		"bierner.markdown-preview-github-styles",
 		"streetsidesoftware.code-spell-checker",
 		"alistairchristie.open-reusables"
@@ -35,8 +35,8 @@
 		
 	"portsAttributes": {
 		"4000": {
-        		"label": "Preview",
-        		"onAutoForward": "openPreview"
+        		"label": "integración",
+        		"onAutoForward": "openIntegración"
       		}
 	},
 
